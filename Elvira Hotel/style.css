@@ -1,0 +1,293 @@
+*{margin:0; padding:0;}
+/*I am targeting the banner element by adding the background image as cover and the positioning.*/
+.banner{
+	background: url("images/beach6.jpg");
+	width: 100%;
+	height: auto;	
+	background-size: cover;
+}
+/*Adding the flexbox attributes in every element, font*/
+.nav{
+	background-color: #FEFEFE;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	height: auto;
+	font-family: 'Volkhov', serif;
+}
+/*Deleting the text decoration to avoid underlining.*/
+.nav a{
+	text-decoration: none;
+}
+/*Positioning the facebook and the instagram buttons*/
+.nav i{
+	display: inline-flex;
+	width: 38px;
+	height: 38px;
+	background: #2C3E50;
+	color: #FEFEFE;
+	margin: 0 6px;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s;
+	font-size: 23px;
+}
+/*Adding an effect for both buttons.*/
+.nav i:hover{
+	background: #F7EC54;
+}
+/*Padding, positioning for the logo element and the menu..*/
+.logo{
+	-webkit-box-flex: 0.5;
+	-webkit-flex: 0.5;
+	-ms-flex: 0.5;
+	flex: 0.5;
+	padding: 1px;
+}
+.menu{
+	-webkit-box-flex: 2;
+	-webkit-flex: 2;
+	-ms-flex: 2;
+	-flex: 2;
+}
+/*Rules for the menu elements using the "row wrap" for the flow*/
+.menu ul{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	list-style: none;
+	margin-top: 30px;
+	padding: 3px;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+}
+.menu ul li{
+	-webkit-box-flex: 3;
+	-webkit-flex: 3;
+	-ms-flex: 3;
+	flex: 3;
+	text align: center;
+}
+.menu ul li a{
+	color: #2C3E50;
+	font-size: 18px;
+	font-family: 'Volkhov', serif;
+	text-decoration: none;
+}
+/*Spaceing, alaining and padding of the columns.*/
+.banner-text{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	padding: 15% 0;
+}
+.banner-text-items{
+	color: #2C3E50;
+	font-family: 'Volkhov', serif;
+	margin: auto;
+	width: 50%;
+	text-align: center;
+}
+/*Defining color, size, etc. for the text elements.*/
+.banner-text-items h2{
+	font-size: 40px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	text-align: center;
+}	
+.banner-text-items p{
+	font-size: 33px;
+	text-transform: uppercase;
+}
+.banner-text-items p a{
+	color: #2C3E50;
+	font-size: 50px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+/*Same for the main section.*/
+.main-content{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	padding 5% 0;
+}
+.main{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+	padding: 3%;
+	font-family: 'Volkhov', serif;
+	text-align: center;
+}
+.main p{
+	text-align: left;
+}
+.main a{
+	color: #000000;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.contact-items{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-mc-flex-direction: column;
+	flex-direction: column;
+}
+/*Adding another image for the contact form. That was the only way image was responsive.*/
+.contact{
+	background: url("images/beach6.jpg");
+	padding: 80px 0;
+	position: relative;
+	z-index: 1;
+	background-size: cover;
+}
+/*Giving the form proper shape.*/
+.contact:before{
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.5);
+	z-index: -1;
+}
+.contact-items h2{
+	color: #EDD50B;
+	font-size: 40px;
+	font-family: 'Volkhov', serif;
+	margin-bottom: 18px;
+}
+.contact-items input{
+	border-radius: 10px;
+	margin-bottom: 15px;
+	font-family: 'Volkhov', serif;
+	padding: 15px;
+	width: 50%;
+}
+.contact-items textarea{
+	border-radius: 10px;
+	font-family: 'Volkhov', serif;
+	height: 150px;
+	padding: 15px;
+	width: 50%;
+}
+.contact-items a{
+	background: #F7EC54;
+	color: #FEFEFE;
+	display: block;
+	font-size: 20px;
+	font-family: 'Volkhov', serif;
+	margin-top: 25px;
+	padding: 15px 80px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+/*Below are both media rules for two types of devices. Both are pretty much the same.*/
+@media all and (max-width:500px){
+.nav{
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	text-align: center;
+}
+.logo{
+	padding: 18px 0 0;
+}
+.menu ul{
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin-top: 0;
+}
+.menu ul li{
+	padding: 5px;
+}
+.banner-text-items{
+	width: 100%;
+}
+.banner-text-items h2{
+	front-size: 20px;;
+}
+.main-content{
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+}
+@media all and (max-width:800px){
+.nav{
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	text-align: center;
+}
+.top-page{
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	text-align: center;
+}
+.logo{
+	padding: 18px 0 0;
+}
+.menu ul{
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	margin-top: 0;
+}
+.menu ul li{
+	padding: 5px;
+}
+.banner-text-items{
+	width: 100%;
+}
+.banner-text-items h2{
+	front-size: 22px;;
+}
+.main-content{
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+}
+}		
